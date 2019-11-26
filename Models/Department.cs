@@ -12,7 +12,7 @@ namespace SalesWebMvc.Models
         public string Name { get; set; }
 
         //aponta para Seller
-        public ICollection<seller> Sellers { get; set; } = new List<seller>();
+        public ICollection<Seller> Sellers { get; set; } = new List<Seller>();
 
         public Department()
         {
@@ -24,7 +24,7 @@ namespace SalesWebMvc.Models
             Name = name;
         }
 
-        public void AddSeller (seller seller)
+        public void AddSeller (Seller seller)
         {
             Sellers.Add(seller);
         }
