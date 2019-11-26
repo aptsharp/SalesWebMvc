@@ -56,6 +56,7 @@ namespace SalesWebMvc.Data
             bool exists = lista.Exists(x => x == 1 || x == 3);
            * 
            */
+
             if (_context.Department.Any() || _context.Seller.Any() || _context.SalesRecords.Any())
             {
                 return; //DB has been seeded
@@ -68,18 +69,18 @@ namespace SalesWebMvc.Data
             Department d2 = new Department(2, "Eletronics");
             Department d3 = new Department(3, "Qualquer");
             Department d4 = new Department(4, "TESTE");
-            Department d6 = new Department(6,  "Notqualquer");
-            Department d5 = new Department(5 , "Book");
+            Department d6 = new Department(5,  "Notqualquer");
+            Department d5 = new Department(6, "Book");
                         
             /*
              * para fazer um conjunto de codigo pareceido é so precionar shift + alt + seta
              */
 
             // Vendedores 
-            Seller s1  = new Seller (1, "Afonso Rafael", "qualquer@gmail.com", new DateTime (1990, 12, 17), 5000.0, d1);
-            Seller s2  = new Seller (1, "Afonso Rafael", "quluer@gmail.com", new DateTime(1990, 12, 01), 3000.0, d2);
-            Seller s3  = new Seller (1, "Afonso Rafael", "qualer@gmail.com", new DateTime(1990, 12, 07), 2000.0, d3);
-            Seller s4  = new Seller (1, "Afonso Rafael", "asdf@gmail.com", new DateTime(1990, 12, 18), 1000.0, d6);
+            Seller s1 = new Seller(1, "Afonso Rafael", "qualquer@gmail.com", new DateTime (1990, 12, 17), 5000.0, d1);
+            Seller s2 = new Seller(2, "Afonso Rafael", "quluer@gmail.com", new DateTime(1990, 12, 01), 3000.0, d2);
+            Seller s3 = new Seller(3, "Afonso Rafael", "qualer@gmail.com", new DateTime(1990, 12, 07), 2000.0, d3);
+            Seller s4 = new Seller(4, "Afonso Rafael", "asdf@gmail.com", new DateTime(1990, 12, 18), 1000.0, d6);
             Seller s5 = new Seller(5, "Donald Blue", "donald@gmail.com", new DateTime(2000, 1, 9), 4000.0, d3);
             Seller s6 = new Seller(6, "Alex Pink", "bob@gmail.com", new DateTime(1997, 3, 4), 3000.0, d2);
 
@@ -124,8 +125,8 @@ namespace SalesWebMvc.Data
 
             _context.Seller.AddRange(s1,s2,s3,s4,s5,s6);
 
-            _context.SalesRecords.AddRange(sr1,sr2,sr3,sr4,sr5,sr6,sr7 , sr8, sr9, sr10, sr11, sr12, sr13, sr14, sr15, sr16,
-                                           sr17, sr18, sr19, sr20, sr21, sr22, sr23, sr24, sr25, sr26, sr27, sr28, sr29, sr30);
+            _context.SalesRecords.AddRange(sr1,sr2,sr3,sr4,sr5,sr6,sr7 , sr8, sr9, sr10, sr11, sr12, sr13, sr14, sr15, sr16, sr17,
+                                            sr18, sr19, sr20, sr21, sr22, sr23, sr24, sr25, sr26, sr27, sr28, sr29, sr30, sr31);
 
             // para salvar as alterações no banco de dados.
 

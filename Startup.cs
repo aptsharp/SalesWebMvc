@@ -52,6 +52,7 @@ namespace SalesWebMvc
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                seedingService.Seed(); //para popular a base de dados
             }
             else
             {
