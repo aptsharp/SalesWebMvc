@@ -35,7 +35,7 @@ namespace SalesWebMvc.Models
             Department = department;
         }
 
-        internal static double Sum(Func<object, object> p)
+        internal static double Sum(Func<object, object> p))
         {
             throw new NotImplementedException();
         }
